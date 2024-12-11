@@ -69,3 +69,28 @@ fig = px.histogram(
 
 # Display the histogram
 st.write(fig)
+
+
+# Filter data for cars with over 200,000 miles
+high_mileage_cars = vehicles_df[vehicles_df['odometer'] > 200000]
+
+# Streamlit App
+st.title("High Mileage Cars Analysis")
+
+# Scatter plot with Streamlit interaction
+if st.checkbox("Show Scatter Plot"):
+    st.write("### Scatter Plot of High Mileage Cars")
+    
+    # Scatter plot: price vs. odometer
+    fig = px.scatter(
+        high_mileage_cars,
+        x="odometer", 
+        y="price",
+        color="model",  # Optional grouping by manufacturer
+        title="Price vs Odometer for High Mileage Cars",
+        labels={"odometer": "Odometer (miles)", "price": "Price ($)"}
+    )
+    
+    # Display the plot
+    st.write(fig)
+
