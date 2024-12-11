@@ -56,3 +56,44 @@ if st.checkbox("Show Scatter Plot"):
 
     # Show the plot
 fig.show()
+
+
+
+
+
+# Filter data for cars with over 200,000 miles
+high_mileage_cars = vehicles_df[vehicles_df['odometer'] > 200000]
+
+# Identify the top 5 car models with the most cars over 200,000 miles
+top_5_models = (
+    high_mileage_cars['model']
+    .value_counts()
+    .head(5)
+    .index.tolist()
+)
+
+# Streamlit App
+st.title("High Mileage Cars Analysis 2")
+
+# Checkbox to toggle between all models and top 5 models
+if st.checkbox("Show Only Top 5 Models"):
+    st.write("### Histogram of Vehicle Types for Top 5 Models")
+    # Filter data for the top 5 models
+    filtered_cars = high_mileage_cars[high_mileage_cars['model'].isin(top_5_models)]
+else:
+    st.write("### Histogram of Vehicle Types for All Models")
+    # Use all high mileage cars
+    filtered_cars = high_mileage_cars
+
+# Create the histogram
+fig = px.histogram(
+    filtered_cars,
+    x="model",
+    color="type",  # Optionally group by vehicle type
+    title="Number of Vehicles by Model and Type",
+    labels={"model": "Car Model", "type": "Vehicle Type"},
+    barmode="stack",  # Stack bars for clarity
+)
+
+# Display the histogram
+st.write(fig)
