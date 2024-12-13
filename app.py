@@ -30,8 +30,6 @@ st.write(px.histogram(df, x='model', color='type'))
 
 st.header('Histogram of `High mileage cars`')
 
-# Show the plot
-fig.show()
 
 # Filter data for cars with over 200,000 miles
 high_mileage_cars = vehicles_df[vehicles_df['odometer'] > 200000]
