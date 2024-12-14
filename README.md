@@ -10,7 +10,7 @@ This project focuses on car models that have over 200,000 miles.It showcases the
 
 -make a [github](github.com) account.
 
--Install VS Code on your local machine. 
+-Install VS Code on your local machine.
 
 
 
