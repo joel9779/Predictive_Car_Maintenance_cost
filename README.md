@@ -1,10 +1,10 @@
 # sprint-4-project
 sprint 4 project
 
-#Description
+# Description
 This project focuses on car models that have over 200,000 miles.It showcases the the models that have historically shown reliability of over 100s of thousands of miles.
 
-#Instructions
+# Instructions
 
 -Download [vehicles_us.csv](https://practicum-content.s3.us-west-1.amazonaws.com/datasets/vehicles_us.csv)
 
