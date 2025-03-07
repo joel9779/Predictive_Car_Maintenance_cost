@@ -1,5 +1,5 @@
-# sprint-4-project
-sprint 4 project
+# Predictive_Car_Maintenance_cost
+Predictive_Car_Maintenance_cost
 
 # Description
 This project focuses on car models that have over 200,000 miles.It showcases the the models that have historically shown reliability of over 100s of thousands of miles.
