@@ -8,7 +8,7 @@ This project focuses on car models that have over 200,000 miles.It showcases the
 
 -Download [vehicles_us.csv](https://practicum-content.s3.us-west-1.amazonaws.com/datasets/vehicles_us.csv)
 
--make a [github](github.com) account.
+-make a [github](github.com) account. 
 
 -Install VS Code on your local machine.
 
